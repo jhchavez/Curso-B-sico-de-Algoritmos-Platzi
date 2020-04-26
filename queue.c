@@ -26,5 +26,19 @@
             values[rear] = value;
             printf("Se inserto el valor %d correctamente\n", value);
         }
+
+    }
+
+    void deQueue();
+    {
+        if(front == -1)
+            printf("Nuestro Queue esta vacio\n");
+        else
+        {
+            printf("Se elimino el valor %d", values[front]);
+            front ++;
+            if(front > rear)
+            front = rear = -1
+        }
         
     }
