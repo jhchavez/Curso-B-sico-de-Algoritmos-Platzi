@@ -11,34 +11,56 @@
     resetear nuestro front y rear a -1 
     y agregar el valor de 0 a Front al hacer nuestro primer enqueue */
 
-    #include<stdio.h>
-    #define SIZE 5
+#include<stdio.h>
+#define SIZE 5
+int values[SIZE], front = -1, rear = -1;
+
 
     void enQueue(int value)
     {
         if (rear == SIZE -1)
-        printf("Nuestro Queue esta lleno \n")
+        printf("Nuestro Queue esta lleno \n");
         else
         {
             if(front == -1)
                 front = 0;
-            rear ++; //suma 1
+            rear++; //suma 1
             values[rear] = value;
-            printf("Se inserto el valor %d correctamente\n", value);
+            printf("Se INSERTO el valor %d correctamente \n", value);
         }
 
     }
 
-    void deQueue();
+    void deQueue()
     {
         if(front == -1)
-            printf("Nuestro Queue esta vacio\n");
+            printf("Nuestro Queue esta vacio \n");
         else
         {
-            printf("Se elimino el valor %d", values[front]);
-            front ++;
+            printf("Se ELIMINO el valor %d correctamente\n", values[front]);
+            front++;
             if(front > rear)
-            front = rear = -1
-        }
-        
+            front = rear = -1;
+        }        
     }
+
+    int main(int argc, char const *argv[])
+    {
+        enQueue(1);
+        enQueue(2);
+        enQueue(3);
+        enQueue(4);
+        enQueue(5);
+        deQueue();
+        deQueue();
+        deQueue();
+        deQueue();
+        deQueue();
+        enQueue(6);
+        enQueue(7);
+        enQueue(8);
+        enQueue(9);
+        enQueue(10);
+        return 0;
+    }
+    
