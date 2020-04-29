@@ -13,7 +13,7 @@ long factorial(int n)
 
 int main(int argc, char const *argv[])
 {
-    printf("Ingreso el numero a calcular\n");
+    printf("Ingrese el numero a calcular\n");
     scanf("%d",&n);
     if(n<0)
     {
