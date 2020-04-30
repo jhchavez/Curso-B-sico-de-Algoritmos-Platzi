@@ -9,7 +9,7 @@
 
 using namespace std;
 
-int greedyChange(int coinSet, int n, int N)
+int greedyChange(int coinSet[], int n, int N)
 {
     if (N==0)
         return 0;
@@ -25,4 +25,16 @@ int greedyChange(int coinSet, int n, int N)
             coins = min(coins, res+1);
     }
     return coins;
+}
+
+int main(int argc, char const *argv[])
+{
+    int coinSet[]={1,5,10,15,20};
+    int n = sizeof(coinSet)/sizeof(coinSet[0]);
+
+    int N = 27;
+
+    cout << "el minimo de monedas para dar cambio es: "
+            <<greedyChange(coinSet, n, N);
+    return 0;
 }
