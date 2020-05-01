@@ -2,6 +2,7 @@
 #2. Crear dos sub array para llevar el control de mi algoritmo
 #3. Imprimir el resultado del Ordenamiento
 import sys
+from datetime import datetime #libreria de tiempo
 array = [20, 5, 21, 6, 23, 7, 34, 999, 68]
 def selectionSort(array):
     #recorrer todo el array
@@ -18,8 +19,10 @@ def selectionSort(array):
         array[i], array[idxDes] = array[idxDes], array[i]
         
 #ejecutar la funcion
-
+tiempoInicial = datetime.now() #medir tiempo
 selectionSort(array)
 print("Array Ordenado:")
 for i in range(len(array)):
     print("%d" %array[i]),
+    
+print (datetime.now() - tiempoInicial), #imprimir tiempo del algoritmo

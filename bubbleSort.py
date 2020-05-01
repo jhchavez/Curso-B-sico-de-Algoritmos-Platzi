@@ -1,6 +1,6 @@
 #1. Comenzar a hacer comparaciones de elementos adyacentes
 #2. Repetir hasta tener una pasada completa sin ningun swap
-
+from datetime import datetime #libreria para medir tiempo
 def bubbleSort(array):
     n = len(array) #cuantos numeros hay en el array
     
@@ -12,9 +12,13 @@ def bubbleSort(array):
                 
                 
 array = [190, 1200, 1, 2, 4, 55, 1000, 6, 800]
+
+tiempoInicial = datetime.now() #medir tiempo
 bubbleSort(array)
 
 print("El arreglo ordenado de forma ascendente es:")
 for i in range(len(array)): #imprimir como va el arreglo en tiempo real
-    print("%d"%array[i]),
+    print("%d"%array[i])
+    
+print(datetime.now() - tiempoInicial), #imprimir tiempo que dura en resolver algoritmos
     
